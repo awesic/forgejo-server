@@ -1,8 +1,0 @@
-services:
-    - type: web
-    name: forgejo
-    runtime: image
-    image:
-      url: codeberg.org/forgejo/forgejo:1.19.0-2
-    branch: main
-    dockerCommand: bash start.sh

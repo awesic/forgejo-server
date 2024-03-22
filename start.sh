@@ -6,11 +6,11 @@ sudo adduser --sytem --shell /bin/bash --gecos 'Git Version Control' --group --d
 
 sudo usermod -aG docker git
 
-mkdir ~/forgejo
+mkdir ~/forgejo && cp .env.forgejo /home/git/
 
 USER_UID=$(id -u git)
 USER_GID=$(id -g git)
-echo -e "USER_UID=$USER_UID\nUSER_GID=$USER_GID" > /home/git/.env.forgejo
+echo -e "\nUSER_UID=$USER_UID\nUSER_GID=$USER_GID" >> /home/git/.env.forgejo
 
 sudo docker-compose up -d
 
