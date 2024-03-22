@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt update && sudo apt install -y docker-compose nginx
+sudo apt update && sudo apt install -y docker-compose nginx ufw
 
-sudo adduser --sytem --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git git
+sudo adduser --system --shell /bin/bash --gecos 'Git Version Control' --group --disabled-password --home /home/git git
 
 sudo usermod -aG docker git
 
